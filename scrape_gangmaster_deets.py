@@ -18,9 +18,11 @@ df = pd.read_csv(r"C:\Users\Melanie Cheung\Desktop\Rightcheckcode\Hunter\gangmas
 
 deets = []
 
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+
 for link in df['Link']:
 
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get(link)
 
 
